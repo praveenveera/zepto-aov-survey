@@ -1,112 +1,106 @@
-# Grocery and Quick-Commerce Shopping Habits — Survey Content
+# Basket Stories — Final Questionnaire
 
 ## Purpose
 
-Understand how people choose between quick-commerce apps, bulk purchases, supermarkets, local stores, markets, and subscriptions, then identify why baskets do or do not expand. This is an independent academic product-management study and is not affiliated with Zepto or another retailer.
+Understand how people build a real grocery or household basket, where expansion stops, and how Zepto can increase AOV without making urgent shopping feel slower or less trustworthy. This is an independent academic product-management study, not a Zepto-affiliated survey.
 
-Estimated completion time: 5–7 minutes.
+Estimated completion: approximately 4–6 minutes, depending on branch.
 
-The remaining context question is purchase-anchored and includes a “Prefer not to say” option. Age and living arrangement are intentionally not collected because they are not required to answer the AOV research question.
+## Design principles
 
-## Section 1 — Consent
+- Start with one recent purchase, not abstract opinions.
+- Ask open behaviour before showing reasons or product ideas.
+- Use one question for one decision.
+- Skip irrelevant questions through branching.
+- Do not ask age or living arrangement; they are not necessary for the AOV decision.
+- Use purchase context (“who was this for?”) instead of intrusive demographic labels.
+- Keep contact information optional and separate from public research outputs.
+
+## Welcome and consent
 
 **Before you begin — consent checkbox**
 
 I agree to take part. My anonymous responses may be used for this academic study. My name will not be published.
 
-## Section 2 — Shopping context
+## Section 1 — Shopping context
 
-**Purchase context**  
-For your most recent purchase, how many people were you shopping for? Just me; 2 people; 3–4 people; 5 or more people; prefer not to say.
+**Q1. Which of these have you used in the last 90 days?** *(Select all that apply)*  
+Zepto; Blinkit; Swiggy Instamart; BigBasket/BB Now; Amazon Fresh; local grocery or kirana store; Dmart or another supermarket; weekly/monthly bulk purchase; milk or grocery subscription; local market; other.
 
-**Q2. Which of these have you used in the last 90 days?**  
-Multiple choice: Zepto; Blinkit; Swiggy Instamart; BigBasket/BB Now; Amazon Fresh; local grocery or kirana store; Dmart or another supermarket; weekly/monthly bulk purchase; milk or grocery subscription; local market; other.
+**Q2. Think about your most recent grocery or household purchase. Which method did you use?**  
+Single choice from the same list.
 
-**Q3. Which method do you use most often for groceries and household items?**  
-Single choice using the same options.
-
-**Q4. What usually determines which method you choose?**  
-Select up to three: urgency; lower price; bulk value or larger pack sizes; convenience; availability; freshness or quality; familiarity or habit; discounts; ability to plan the whole household purchase; delivery speed; subscription convenience; other.
-
-## Section 3 — Most recent shopping episode
-
-**Q5. Think about your most recent grocery or household purchase. Which method did you use?**  
-Single choice from Q2 options.
-
-**Q6. What triggered that purchase?**  
+**Q3. What triggered that purchase?**  
 Urgent need; planned top-up; weekly/monthly stock-up; meal or snack; event or guests; recurring subscription; offer or discount; other.
 
-**Q7. Tell us about the recent purchase in your own words. What were you trying to accomplish, and how did you decide?**  
-Required paragraph answer. Ask this before showing detailed categories or stopping-reason options.
+**Q4. Tell us about that purchase in your own words. What were you trying to accomplish, and how did you decide?**  
+Required open response. Ask before showing detailed reasons.
 
-**Q8. What was the first item or need that started the purchase?**  
+**Q5. Who was this purchase mainly for?**  
+Myself; my family; a shared household; children or dependants; another household; prefer not to say.
+
+**Q6. For this purchase, how many people were you shopping for?**  
+Just me; 2 people; 3–4 people; 5 or more people; prefer not to say.
+
+**Q7. What was the first item or need that started the purchase?**  
 Short answer.
 
-**Q9. Approximately how many items did you buy?**  
+## Section 2 — Basket snapshot
+
+**Q8. Approximately how many items did you buy?**  
 1; 2–3; 4–6; 7–10; more than 10; do not remember.
 
-**Q10. Approximately how much did you spend?**  
+**Q9. Approximately how much did you spend?**  
 Below ₹200; ₹200–399; ₹400–699; ₹700–999; ₹1,000 or more; prefer not to say.
 
-**Q11. Which categories did you buy?**  
+**Q10. Which categories did you buy?** *(Select all that apply)*  
 Fresh produce; dairy/bread/eggs; staples or packaged groceries; snacks/beverages; personal care; household cleaning; baby or pet products; ready-to-eat/meal items; other.
 
-## Section 4 — Basket expansion
+## Section 3 — How the basket expanded
 
-**Basket-building question. Think about your most recent purchase. After adding the first item or need, how did you build the basket?**  
+**Q11. After adding the first item or need, how did you build the basket?**  
 Added already-planned items; browsed and added extra items; searched for related items; added items to reach an offer or threshold; checked out immediately; removed items before checkout; do not remember.
 
-**Q13. Did you consider adding anything else but decide not to?**  
+**Q12. Did you consider adding anything else but decide not to?**  
 Yes; no; not sure.
 
-If yes, show the next question. If no or not sure, skip Q14 and continue to Q15:
+If **Yes**:
 
-**Q14. What was the main reason you did not add it?**  
-The urgent need was complete; prefer buying larger quantities elsewhere; too expensive; trying to control spending; no time to browse; could not find the right item; suggestions were not relevant; did not trust quality or pack size; had reached a useful threshold or offer; planned to buy it elsewhere; other.
+**Q13. What was the main reason you did not add it?**  
+The urgent need was complete; I prefer buying larger quantities elsewhere; it felt too expensive; I was controlling spending; I had no time to browse; I could not find the right item; suggestions were not relevant; I did not trust the quality or pack size; I planned to buy it elsewhere; other.
 
-**Minimum-order behaviour. When your basket is below a free-delivery or minimum-order threshold, what do you usually do?**  
+**Q14. When your basket is below a free-delivery or minimum-order threshold, what do you usually do?**  
 Add another useful item; switch to a larger pack or planned shop; pay the delivery fee and check out; remove items or abandon the order; wait and combine it with a later purchase; no effect; did not notice any threshold or offer.
 
-## Section 5 — Brand-specific branch
+## Section 4 — Branch by recent method
 
-If the respondent's most recent purchase was through Zepto:
+If the recent purchase was **Zepto**:
 
-**Q16A. Why did you choose Zepto for that order instead of another option?**  
+**Q15A. Why did you choose Zepto for that order instead of another option?**  
 Urgency; convenience; price or offer; availability; familiar habit; delivery speed; recommendation; other.
 
-**Q17A. What would have made you add one more useful item to this Zepto order?**  
-Use a short open-ended answer or probe for relevance, value, pack size, time, and discovery.
+**Q16A. What would have made you add one more useful item to this Zepto order?**  
+Open response. Probe for relevance, value, pack size, time, and discovery only after the participant answers.
 
-For this branch, continue with **Q18. What usually prevents you from adding more items to the same order or basket?** and **Q19. Would you be open to a short follow-up conversation?**
+If the recent purchase used **another method**:
 
-If the respondent's most recent purchase used another method:
+**Q15B. Why did you choose [the selected method] for this purchase?**  
+For bulk/Dmart/local market: better value for larger quantities; planned to shop there; closer or more convenient; trust in quality/freshness; availability; habit/family preference; did not need fast delivery; other.  
+For quick-commerce alternatives: speed/reliability; price/offer; availability; familiar app/habit; quality/pack sizes; convenience for this need; other.
 
-**Q16B. Why did you choose [the selected method] for this purchase?**  
-Tune the choices to the selected method: value and larger quantities for bulk/Dmart/local market; speed, offer, availability, and app familiarity for competing quick-commerce apps.
-
-**Q17B. Have you used Zepto before?**  
+**Q16B. Have you used Zepto before?**  
 Yes, but not recently; no, never; not sure.
 
-**Q18B. For a similar purchase, what would make you consider Zepto?**  
-Better price or value; larger packs or better assortment; faster or more reliable delivery; more relevant suggestions; more confidence in quality or freshness; I would not consider Zepto; other.
+**Q17B. When you choose [the selected method], what would need to be different for Zepto to be in your shortlist?**  
+Better price/value; larger packs or assortment; faster/reliable delivery; more relevant suggestions; more confidence in quality/freshness; I would not consider Zepto; other.
 
-## Section 6 — Open behavioural evidence
-
-For the non-Zepto branch, continue with **Q19. What usually prevents you from adding more items to the same order or basket?**
-
-**Q19. What usually prevents you from adding more items to the same order or basket?**
-
-## Section 7 — Follow-up
-
-For the non-Zepto branch, this is **Q20. Would you be open to a short follow-up conversation about this purchase?** For the Zepto branch, it is Q19.
+## Section 5 — Follow-up
 
 **Follow-up question**  
-Yes; no.
+Would you be open to a short follow-up conversation about this purchase? Yes; no.
 
-**Optional contact field, shown on the same screen only if the respondent selects Yes**
-
-Store separately from public research outputs.
+If yes, show an optional phone/email field on the same screen. Do not publish contact details.
 
 ## Analysis boundary
 
-Recent Zepto orders are the core evidence for the Zepto AOV problem. Other methods provide context about alternatives, switching, bulk economics, and reasons a user may not expand a quick-commerce basket. Do not present non-Zepto responses as measured Zepto behaviour.
+Recent Zepto orders are direct Zepto AOV evidence. Other methods provide context about alternatives, switching, bulk economics, and why users may not expand a quick-commerce basket. Do not present non-Zepto responses as measured Zepto behaviour.
