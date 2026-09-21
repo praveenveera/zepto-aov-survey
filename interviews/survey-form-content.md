@@ -24,8 +24,14 @@ I agree to take part. My anonymous responses may be used for this academic study
 
 ## Section 1 — Shopping context
 
-**Q1. Think about your most recent grocery or household purchase. Which method did you use?**  
-Zepto; Blinkit; Swiggy Instamart; BigBasket/BB Now; Amazon Fresh; local grocery or kirana store; Dmart or another supermarket; weekly/monthly bulk purchase; milk or grocery subscription; local market; other. This answer immediately selects the relevant follow-up branch.
+**Q1 — Where. Think about your most recent grocery or household purchase. Which channel did you use?**  
+Zepto; Blinkit; Swiggy Instamart; BigBasket/BB Now; Amazon Fresh; local grocery or kirana store; Dmart or another supermarket; local market; other. This answer immediately selects the relevant follow-up branch.
+
+**Q2 — How. What kind of purchase was this?**  
+One-off urgent purchase; planned top-up; weekly stock-up; monthly stock-up; recurring subscription or reorder; event or guests; other.
+
+**Q3 — When/why. What triggered that purchase?**  
+Urgent need; planned top-up; weekly or monthly stock-up; meal or snack; event or guests; recurring subscription; offer or discount; other.
 
 **Q3. What triggered that purchase?**  
 Urgent need; planned top-up; weekly/monthly stock-up; meal or snack; event or guests; recurring subscription; offer or discount; other.

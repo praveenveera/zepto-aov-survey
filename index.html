@@ -111,6 +111,7 @@
     copy.en.qLivingArrangement = "Which best describes your living arrangement?";
     copy.en.qHouseholdSize = "For your most recent purchase, how many people were you shopping for?";
     copy.en.qShoppingFor = "Who was this purchase mainly for?";
+    copy.en.qPurchaseMode = "What kind of purchase was this?";
     copy.en.qExpansion = "Think about your most recent purchase. After adding the first item or need, how did you build the basket?";
     copy.en.qThreshold = "When your basket is below a free-delivery or minimum-order threshold, what do you usually do?";
     copy.en.qDrivers = "Thinking about your last few grocery purchases, what made you choose that shopping method? (Choose up to three)";
@@ -128,6 +129,7 @@
     copy.hi.qLivingArrangement = "आपकी रहने की स्थिति इनमें से किससे सबसे अच्छी तरह मिलती है?";
     copy.hi.qHouseholdSize = "अपनी सबसे हाल की खरीदारी के लिए, आप कितने लोगों के लिए सामान खरीद रहे थे?";
     copy.hi.qShoppingFor = "यह खरीदारी मुख्य रूप से किसके लिए थी?";
+    copy.hi.qPurchaseMode = "यह किस तरह की खरीदारी थी?";
     copy.hi.qExpansion = "अपनी सबसे हाल की खरीदारी के बारे में सोचें। पहली वस्तु या जरूरत जोड़ने के बाद आपने बास्केट कैसे बनाई?";
     copy.hi.qThreshold = "जब आपकी बास्केट फ्री-डिलीवरी या न्यूनतम ऑर्डर सीमा से कम होती है, तो आप आमतौर पर क्या करते हैं?";
     copy.hi.qDrivers = "अपनी पिछली कुछ किराने की खरीदारी के बारे में सोचें। आपने वह तरीका क्यों चुना? (अधिकतम तीन चुनें)";
@@ -144,6 +146,7 @@
     copy.te.qLivingArrangement = "మీ నివాస పరిస్థితికి ఏది బాగా సరిపోతుంది?";
     copy.te.qHouseholdSize = "మీ ఇటీవలి కొనుగోలులో, మీరు ఎంత మంది కోసం సరుకులు కొంటున్నారు?";
     copy.te.qShoppingFor = "ఈ కొనుగోలు ప్రధానంగా ఎవరి కోసం?";
+    copy.te.qPurchaseMode = "ఇది ఎలాంటి కొనుగోలు?";
     copy.te.qExpansion = "మీ ఇటీవలి కొనుగోలు గురించి ఆలోచించండి. మొదటి వస్తువు లేదా అవసరాన్ని జోడించిన తర్వాత బాస్కెట్‌ను ఎలా నిర్మించారు?";
     copy.te.qThreshold = "మీ బాస్కెట్ ఉచిత డెలివరీ లేదా కనీస ఆర్డర్ పరిమితి కంటే తక్కువగా ఉన్నప్పుడు సాధారణంగా ఏమి చేస్తారు?";
     copy.te.qDrivers = "మీ ఇటీవలి కొన్ని కిరాణా కొనుగోళ్ల గురించి ఆలోచించండి. ఆ పద్ధతిని ఎందుకు ఎంచుకున్నారు? (మూడు వరకు ఎంచుకోండి)";
@@ -165,10 +168,11 @@
     copy.te.welcomeKicker = "చిన్న అనామక సర్వే";
     copy.te.welcomeBody = "ప్రజలు క్విక్-కామర్స్, సూపర్‌మార్కెట్లు, స్థానిక దుకాణాలు, బల్క్ కొనుగోలు మరియు సబ్‌స్క్రిప్షన్‌ల ద్వారా కిరాణా ఎలా కొనుగోలు చేస్తారో అర్థం చేసుకోవాలనుకుంటున్నాము. దీనికి 5–7 నిమిషాలు పడుతుంది. ఇది Zepto లేదా మరే ఇతర రిటైలర్‌కు సంబంధించినది కాదు.";
     copy.te.consent = "నేను పాల్గొనడానికి అంగీకరిస్తున్నాను. నా అనామక సమాధానాలను ఈ అకాడమిక్ అధ్యయనం కోసం ఉపయోగించవచ్చు.";
-    var methods = ["zepto","blinkit","instamart","bigbasket","amazonFresh","localStore","dmart","bulk","subscription","market","otherMethod"];
+    var methods = ["zepto","blinkit","instamart","bigbasket","amazonFresh","localStore","dmart","market","otherMethod"];
     var methodLabels = { zepto:"Zepto", blinkit:"Blinkit", instamart:"Swiggy Instamart", bigbasket:"BigBasket / BB Now", amazonFresh:"Amazon Fresh", localStore:"Local grocery or kirana store", dmart:"Dmart or another supermarket", bulk:"Weekly or monthly bulk purchase", subscription:"Milk or grocery subscription", market:"Local market", otherMethod:"Other" };
     var drivers = ["Urgency","Lower price","Bulk value or larger pack sizes","Convenience","Availability","Freshness or quality","Familiarity or habit","Discounts and offers","Plan the whole household purchase","Delivery speed","Subscription convenience","Other"];
     var triggers = ["Urgent need","Planned top-up","Weekly or monthly stock-up","Meal or snack","Event or guests","Recurring subscription","Offer or discount","Other"];
+    var purchaseModes = ["One-off urgent purchase","Planned top-up","Weekly stock-up","Monthly stock-up","Recurring subscription or reorder","Event or guests","Other"];
     var categories = ["Fresh produce","Dairy, bread, or eggs","Staples or packaged groceries","Snacks or beverages","Personal care","Household cleaning","Baby or pet products","Ready-to-eat or meal items","Other"];
     var expansion = ["Added already-planned items","Browsed and added extra items","Searched for related items","Added items to reach an offer or threshold","Checked out immediately","Removed items before checkout","I do not remember"];
     var stopReasons = ["The urgent need was complete","I prefer buying larger quantities elsewhere","It felt too expensive","I was trying to control spending","I had no time to browse","I could not find the right item","Suggestions were not relevant","I did not trust the quality or pack size","I had reached a useful threshold or offer","I planned to buy it elsewhere","Other"];
@@ -184,8 +188,8 @@
     function hasZepto() { return (state.answers.methods || []).indexOf("zepto") !== -1; }
     function currentRecentIsZepto() { return state.answers.recentMethod === "zepto"; }
     function recentMethodLabel() { return label(state.answers.recentMethod || ""); }
-    function steps() { var s = ["welcome","recentMethod","trigger","shoppingFor","householdSize","items","spend","categories","expansion","considered"]; if (state.answers.considered === t("yes")) s.push("stop"); s.push("threshold"); if (currentRecentIsZepto()) s.push("zeptoWhy"); else s.push("altWhy","usedBefore","considerZepto"); s.push("story","need"); if (currentRecentIsZepto()) s.push("zeptoStop"); s.push("follow"); return s; }
-    function titleFor(id) { var map = { shoppingFor:"qShoppingFor", householdSize:"qHouseholdSize", methods:"qMethods", recentMethod:"qRecentMethod", trigger:"qTrigger", need:"qNeed", items:"qItems", spend:"qSpend", categories:"qCategories", expansion:"qExpansion", considered:"qConsidered", stop:"qStop", threshold:"qThreshold", zeptoWhy:"qZeptoWhy", zeptoStop:"qZeptoStop", usedBefore:"qUsedBefore", story:"qStory", follow:"qFollow" }; if (id === "altWhy") return t("qAltWhy").replace("{method}", recentMethodLabel()); if (id === "considerZepto") return t("qConsiderZepto").replace("{method}", recentMethodLabel()); return map[id] ? t(map[id]) : ""; }
+    function steps() { var s = ["welcome","recentMethod","purchaseMode","trigger","shoppingFor","householdSize","items","spend","categories","expansion","considered"]; if (state.answers.considered === t("yes")) s.push("stop"); s.push("threshold"); if (currentRecentIsZepto()) s.push("zeptoWhy"); else s.push("altWhy","usedBefore","considerZepto"); s.push("story","need"); if (currentRecentIsZepto()) s.push("zeptoStop"); s.push("follow"); return s; }
+    function titleFor(id) { var map = { shoppingFor:"qShoppingFor", householdSize:"qHouseholdSize", purchaseMode:"qPurchaseMode", methods:"qMethods", recentMethod:"qRecentMethod", trigger:"qTrigger", need:"qNeed", items:"qItems", spend:"qSpend", categories:"qCategories", expansion:"qExpansion", considered:"qConsidered", stop:"qStop", threshold:"qThreshold", zeptoWhy:"qZeptoWhy", zeptoStop:"qZeptoStop", usedBefore:"qUsedBefore", story:"qStory", follow:"qFollow" }; if (id === "altWhy") return t("qAltWhy").replace("{method}", recentMethodLabel()); if (id === "considerZepto") return t("qConsiderZepto").replace("{method}", recentMethodLabel()); return map[id] ? t(map[id]) : ""; }
     function isMulti(id) { return ["methods","drivers","categories"].indexOf(id) !== -1; }
     function optionValues(id) { if (id === "methods") return methods; if (id === "drivers") return drivers; if (id === "categories") return categories; if (id === "triggers") return triggers; if (id === "expansion") return expansion; if (id === "stopReasons") return stopReasons; return []; }
     function displayValue(id, v) { if (["methods","primary","recentMethod"].indexOf(id) !== -1) return label(v); return v; }
@@ -198,6 +202,7 @@
       if (id === "ageGroup") app.appendChild(renderOptions(id, ageGroups, false));
       else if (id === "livingArrangement") app.appendChild(renderOptions(id, livingArrangements, false));
       else if (id === "shoppingFor") app.appendChild(renderOptions(id, shoppingFor, false));
+      else if (id === "purchaseMode") app.appendChild(renderOptions(id, purchaseModes, false));
       else if (id === "householdSize") app.appendChild(renderOptions(id, householdSizes, false));
       else if (["methods","drivers","categories"].indexOf(id) !== -1) app.appendChild(renderOptions(id, optionValues(id), true));
       else if (id === "primary" || id === "recentMethod") app.appendChild(renderOptions(id, methods, false));
