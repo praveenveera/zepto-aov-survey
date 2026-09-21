@@ -19,6 +19,10 @@ This is an independent academic product-management study. It is not affiliated w
 
 The survey is not a substitute for the required real user conversations. Do not convert target quotas or hypotheses into findings.
 
+### Validation status
+
+The instrument has passed a structural review of question purpose, order, branch coverage, and browser navigation. It has not yet passed empirical pilot validation. The first pilot should check comprehension, completion time, response distributions, and whether participants can describe a real purchase without being led by the options.
+
 ## 3. Research method
 
 Use a mixed primary-research approach:

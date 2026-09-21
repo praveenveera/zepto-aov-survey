@@ -54,7 +54,7 @@ Added already-planned items; browsed and added extra items; searched for related
 **Q13. Did you consider adding anything else but decide not to?**  
 Yes; no; not sure.
 
-If yes:
+If yes, show the next question. If no or not sure, skip Q14 and continue to Q15:
 
 **Q14. What was the main reason you did not add it?**  
 The urgent need was complete; prefer buying larger quantities elsewhere; too expensive; trying to control spending; no time to browse; could not find the right item; suggestions were not relevant; did not trust quality or pack size; had reached a useful threshold or offer; planned to buy it elsewhere; other.
@@ -69,8 +69,8 @@ If the respondent's most recent purchase was through Zepto:
 **Q16A. Why did you choose Zepto for that order instead of another option?**  
 Urgency; convenience; price or offer; availability; familiar habit; delivery speed; recommendation; other.
 
-**Q17A. In this Zepto order, what influenced where you stopped adding items?**  
-Use the general stopping reasons, plus “I had completed my planned list.”
+**Q17A. What would have made you add one more useful item to this Zepto order?**  
+Use a short open-ended answer or probe for relevance, value, pack size, time, and discovery.
 
 For this branch, continue with **Q18. What usually prevents you from adding more items to the same order or basket?** and **Q19. Would you be open to a short follow-up conversation?**
 
@@ -89,7 +89,7 @@ Better price or value; larger packs or better assortment; faster or more reliabl
 
 For the non-Zepto branch, continue with **Q19. What usually prevents you from adding more items to the same order or basket?**
 
-What usually prevents you from adding more items to the same order or basket?
+**Q19. What usually prevents you from adding more items to the same order or basket?**
 
 ## Section 7 — Follow-up
 
