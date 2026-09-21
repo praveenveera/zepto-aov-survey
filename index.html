@@ -157,6 +157,7 @@
       else if (id === "trigger") app.appendChild(renderOptions(id, triggers, false));
       else if (id === "expansion") app.appendChild(renderOptions(id, expansion, false));
       else if (id === "stop") app.appendChild(renderOptions(id, stopReasons, false));
+      else if (id === "zeptoWhy") app.appendChild(renderOptions(id, ["Urgency","Convenience","Price or offer","Availability","Familiar habit","Delivery speed","Recommendation","Other"], false));
       else if (id === "altWhy") app.appendChild(renderOptions(id, alternativeReasons(state.answers.recentMethod), false));
       else if (id === "considerZepto") app.appendChild(renderOptions(id, ["Better price or value","Larger packs or better assortment","Faster or more reliable delivery","More relevant suggestions","More confidence in quality or freshness","I would not consider Zepto","Other"], false));
       else if (id === "considered" || id === "follow" || id === "usedBefore") app.appendChild(renderOptions(id, [t("yes"),t("no"),t("unsure")], false));
