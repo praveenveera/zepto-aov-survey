@@ -33,11 +33,8 @@ One-off urgent purchase; planned top-up; weekly stock-up; monthly stock-up; recu
 **Q3 — When/why. What triggered that purchase?**  
 Urgent need; planned top-up; weekly or monthly stock-up; meal or snack; event or guests; recurring subscription; offer or discount; other.
 
-**Q3. What triggered that purchase?**  
-Urgent need; planned top-up; weekly/monthly stock-up; meal or snack; event or guests; recurring subscription; offer or discount; other.
-
-**Q4. Tell us about that purchase in your own words. What were you trying to accomplish, and how did you decide?**  
-Required open response. Ask before showing detailed reasons.
+**Q4. What were you mainly trying to accomplish with this purchase?**  
+Replace something that ran out; get an urgent item quickly; complete a planned grocery list; stock up for the week or month; buy for a meal, snack, or event; try a new product; use an offer or discount; other. If “Other” is selected, show a short text field.
 
 **Household context. For this purchase, how many people were you shopping for?**  
 Just me; 2 people; 3–4 people; 5 or more people; prefer not to say.
