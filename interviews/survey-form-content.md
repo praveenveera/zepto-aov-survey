@@ -39,8 +39,8 @@ Replace something that ran out; get an urgent item quickly; complete a planned g
 **Household context. For this purchase, how many people were you shopping for?**  
 Just me; 2 people; 3–4 people; 5 or more people; prefer not to say.
 
-**Q7. What was the first item or need that started the purchase?**  
-Short answer.
+**Q7. Which type of item or need started the purchase?**  
+Milk, dairy, bread, or eggs; fresh produce; staples or packaged groceries; snacks or beverages; personal care; household cleaning; baby or pet products; ready-to-eat or meal items; other. If “Other” is selected, show a short text field.
 
 ## Section 2 — Basket snapshot
 
