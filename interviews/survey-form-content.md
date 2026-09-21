@@ -6,7 +6,7 @@ Understand how people choose between quick-commerce apps, bulk purchases, superm
 
 Estimated completion time: 5–7 minutes.
 
-The profile questions are non-identifying and include a “Prefer not to say” option. They support behavioural segmentation, not individual profiling.
+The remaining context question is purchase-anchored and includes a “Prefer not to say” option. Age and living arrangement are intentionally not collected because they are not required to answer the AOV research question.
 
 ## Section 1 — Consent
 
@@ -16,10 +16,8 @@ I agree to take part. My anonymous responses may be used for this academic study
 
 ## Section 2 — Shopping context
 
-**Profile questions**  
-Age group: under 18; 18–24; 25–34; 35–44; 45–54; 55 or older; prefer not to say.  
-Living arrangement: living alone; with parents or family; with a partner or spouse; with roommates or friends; other; prefer not to say.  
-People usually included in grocery shopping: just me; 2; 3–4; 5 or more; prefer not to say.
+**Purchase context**  
+For your most recent purchase, how many people were you shopping for? Just me; 2 people; 3–4 people; 5 or more people; prefer not to say.
 
 **Q2. Which of these have you used in the last 90 days?**  
 Multiple choice: Zepto; Blinkit; Swiggy Instamart; BigBasket/BB Now; Amazon Fresh; local grocery or kirana store; Dmart or another supermarket; weekly/monthly bulk purchase; milk or grocery subscription; local market; other.
