@@ -6,6 +6,8 @@ Understand how people choose between quick-commerce apps, bulk purchases, superm
 
 Estimated completion time: 5–7 minutes.
 
+The profile questions are non-identifying and include a “Prefer not to say” option. They support behavioural segmentation, not individual profiling.
+
 ## Section 1 — Consent
 
 **Q1. Required checkbox**
@@ -13,6 +15,11 @@ Estimated completion time: 5–7 minutes.
 I agree that my anonymous answers may be used as research evidence or anonymous quotes in this academic study. My name will not be published.
 
 ## Section 2 — Shopping context
+
+**Profile questions**  
+Age group: under 18; 18–24; 25–34; 35–44; 45–54; 55 or older; prefer not to say.  
+Living arrangement: living alone; with parents or family; with a partner or spouse; with roommates or friends; other; prefer not to say.  
+People usually included in grocery shopping: just me; 2; 3–4; 5 or more; prefer not to say.
 
 **Q2. Which of these have you used in the last 90 days?**  
 Multiple choice: Zepto; Blinkit; Swiggy Instamart; BigBasket/BB Now; Amazon Fresh; local grocery or kirana store; Dmart or another supermarket; weekly/monthly bulk purchase; milk or grocery subscription; local market; other.
@@ -48,7 +55,7 @@ Fresh produce; dairy/bread/eggs; staples or packaged groceries; snacks/beverages
 
 ## Section 4 — Basket expansion
 
-**Q12. After adding the first item or need, what did you do next?**  
+**Basket-building question. Think about your most recent purchase. After adding the first item or need, how did you build the basket?**  
 Added already-planned items; browsed and added extra items; searched for related items; added items to reach an offer or threshold; checked out immediately; removed items before checkout; do not remember.
 
 **Q13. Did you consider adding anything else but decide not to?**  
@@ -59,8 +66,8 @@ If yes, show the next question. If no or not sure, skip Q14 and continue to Q15:
 **Q14. What was the main reason you did not add it?**  
 The urgent need was complete; prefer buying larger quantities elsewhere; too expensive; trying to control spending; no time to browse; could not find the right item; suggestions were not relevant; did not trust quality or pack size; had reached a useful threshold or offer; planned to buy it elsewhere; other.
 
-**Q15. Did any delivery fee, free-delivery threshold, coupon, or offer affect your basket decision?**  
-Added items to qualify; stopped after reaching a threshold; paid the fee and checked out; removed items because the final price was too high; no effect; did not notice any threshold or offer.
+**Minimum-order behaviour. When your basket is below a free-delivery or minimum-order threshold, what do you usually do?**  
+Add another useful item; switch to a larger pack or planned shop; pay the delivery fee and check out; remove items or abandon the order; wait and combine it with a later purchase; no effect; did not notice any threshold or offer.
 
 ## Section 5 — Brand-specific branch
 
