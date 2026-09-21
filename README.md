@@ -1,9 +1,26 @@
-# Basket Stories — Zepto AOV Research Survey
+# Project 4 — Increasing AOV at Zepto
 
-Independent student research survey for Airtribe Project 4. The survey studies grocery and quick-commerce behaviour across Zepto, competing apps, supermarkets, local stores, bulk buying, and subscriptions.
+This workspace contains the evidence-controlled research and submission artifacts for the group assignment on increasing Average Order Value (AOV) at Zepto.
 
-Live frontend: https://praveenveera.github.io/zepto-aov-survey/
+## Current decision
 
-This public repository contains only the survey interface and backend setup instructions. The response Google Sheet is separate and is not included here.
+Use a neutral grocery and quick-commerce survey. Do not assume that respondents use Zepto. Analyse recent Zepto orders as the core AOV evidence; use competitor, supermarket, local-market, bulk-purchase, and subscription behaviour as context for alternatives and barriers.
 
-Before distribution, configure `APPS_SCRIPT_URL` in `index.html` using the steps in [`DEPLOY.md`](DEPLOY.md), test one response, and confirm it reaches the separate response sheet.
+## Evidence rules
+
+- Do not invent interviews, quotes, numbers, or user behaviour.
+- Label participant evidence, secondary evidence, assumptions, hypotheses, and recommendations separately.
+- Treat self-serve survey responses as survey evidence, not as fully probed interviews.
+- Keep contact details out of public synthesis artifacts.
+
+## Working files
+
+- [`interviews/survey-form-content.md`](interviews/survey-form-content.md) — draft questionnaire and branching logic
+- [`research/sampling-plan.md`](research/sampling-plan.md) — team allocation and analysis plan
+- [`webapp/index.html`](webapp/index.html) — mobile survey app with adaptive method branches
+
+## Next gate
+
+Review the adaptive flow and questionnaire, then configure the separate Zepto response backend before distribution.
+
+The app now asks the common recent-purchase questions first, then adapts later questions to the selected recent method. A recent Zepto order receives Zepto-specific questions; a recent competitor, supermarket, local-market, bulk, or subscription purchase receives method-specific alternative questions. Follow-up contact is optional and stays on the same final screen.
