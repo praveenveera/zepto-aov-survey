@@ -39,10 +39,7 @@ Urgent need; planned top-up; weekly/monthly stock-up; meal or snack; event or gu
 **Q4. Tell us about that purchase in your own words. What were you trying to accomplish, and how did you decide?**  
 Required open response. Ask before showing detailed reasons.
 
-**Q5. Who was this purchase mainly for?**  
-Myself; my family; a shared household; children or dependants; another household; prefer not to say.
-
-**Q6. For this purchase, how many people were you shopping for?**  
+**Household context. For this purchase, how many people were you shopping for?**  
 Just me; 2 people; 3–4 people; 5 or more people; prefer not to say.
 
 **Q7. What was the first item or need that started the purchase?**  
