@@ -18,6 +18,7 @@ Use a neutral grocery and quick-commerce survey. Do not assume that respondents 
 - [`interviews/survey-form-content.md`](interviews/survey-form-content.md) — draft questionnaire and branching logic
 - [`research/sampling-plan.md`](research/sampling-plan.md) — team allocation and analysis plan
 - [`research/analysis-and-recommendations.md`](research/analysis-and-recommendations.md) — evidence boundary, working segments, blockers, solutions, RICE, and KPIs
+- [`research/questionnaire-review.md`](research/questionnaire-review.md) — questionnaire rationale, duplicate-question correction, adaptive logic, and validation record
 - [`webapp/index.html`](webapp/index.html) — mobile survey app with adaptive method branches
 - [`submission/walkthrough-script.md`](submission/walkthrough-script.md) — five-minute presentation walkthrough draft
 - [`research/source-register.md`](research/source-register.md) — dated competitor and teardown sources
