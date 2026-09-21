@@ -112,6 +112,11 @@
     copy.en.qHouseholdSize = "How many people are usually included in your grocery shopping?";
     copy.en.qExpansion = "Think about your most recent purchase. After adding the first item or need, how did you build the basket?";
     copy.en.qThreshold = "When your basket is below a free-delivery or minimum-order threshold, what do you usually do?";
+    copy.en.qDrivers = "Thinking about your last few grocery purchases, what made you choose that shopping method? (Choose up to three)";
+    copy.en.qPrevent = "Thinking about a similar purchase, which situation most often makes you stop adding items?";
+    copy.en.qConsiderZepto = "When you choose {method}, what would need to be different for Zepto to be in your shortlist?";
+    copy.en.welcomeLabel = "Welcome";
+    copy.en.consent = "I agree to take part. My anonymous responses may be used for this academic study.";
     copy.en.qZeptoStop = "What would have made you add one more useful item to this Zepto order?";
     copy.en.qConsiderZepto = "For a similar {method} purchase, what would make you consider Zepto?";
     copy.en.qZeptoStop = "What would have made you add one more useful item to this Zepto order?";
@@ -121,6 +126,11 @@
     copy.hi.qHouseholdSize = "आपकी किराने की खरीदारी में आमतौर पर कितने लोग शामिल होते हैं?";
     copy.hi.qExpansion = "अपनी सबसे हाल की खरीदारी के बारे में सोचें। पहली वस्तु या जरूरत जोड़ने के बाद आपने बास्केट कैसे बनाई?";
     copy.hi.qThreshold = "जब आपकी बास्केट फ्री-डिलीवरी या न्यूनतम ऑर्डर सीमा से कम होती है, तो आप आमतौर पर क्या करते हैं?";
+    copy.hi.qDrivers = "अपनी पिछली कुछ किराने की खरीदारी के बारे में सोचें। आपने वह तरीका क्यों चुना? (अधिकतम तीन चुनें)";
+    copy.hi.qPrevent = "ऐसी ही खरीदारी के बारे में सोचें। सामान जोड़ना रोकने की सबसे आम स्थिति कौन सी होती है?";
+    copy.hi.qConsiderZepto = "जब आप {method} चुनते हैं, तो Zepto को अपने विकल्पों में शामिल करने के लिए क्या अलग होना चाहिए?";
+    copy.hi.welcomeLabel = "स्वागत है";
+    copy.hi.consent = "मैं भाग लेने के लिए सहमत हूं। मेरे गुमनाम जवाबों का उपयोग इस अकादमिक अध्ययन के लिए किया जा सकता है।";
     copy.hi.qConsiderZepto = "{method} जैसी खरीदारी के लिए आप Zepto पर कब विचार करेंगे?";
     copy.hi.qZeptoStop = "इस Zepto ऑर्डर में एक और उपयोगी सामान जोड़ने के लिए क्या मददगार होता?";
     copy.te.qAltWhy = "ఈ కొనుగోలు కోసం {method} ను ఎందుకు ఎంచుకున్నారు?";
@@ -129,6 +139,11 @@
     copy.te.qHouseholdSize = "మీ కిరాణా కొనుగోలులో సాధారణంగా ఎన్ని మంది ఉంటారు?";
     copy.te.qExpansion = "మీ ఇటీవలి కొనుగోలు గురించి ఆలోచించండి. మొదటి వస్తువు లేదా అవసరాన్ని జోడించిన తర్వాత బాస్కెట్‌ను ఎలా నిర్మించారు?";
     copy.te.qThreshold = "మీ బాస్కెట్ ఉచిత డెలివరీ లేదా కనీస ఆర్డర్ పరిమితి కంటే తక్కువగా ఉన్నప్పుడు సాధారణంగా ఏమి చేస్తారు?";
+    copy.te.qDrivers = "మీ ఇటీవలి కొన్ని కిరాణా కొనుగోళ్ల గురించి ఆలోచించండి. ఆ పద్ధతిని ఎందుకు ఎంచుకున్నారు? (మూడు వరకు ఎంచుకోండి)";
+    copy.te.qPrevent = "ఇలాంటి కొనుగోలు గురించి ఆలోచించండి. వస్తువులు జోడించడం ఆపడానికి సాధారణంగా ఏ పరిస్థితి కారణమవుతుంది?";
+    copy.te.qConsiderZepto = "మీరు {method} ఎంచుకున్నప్పుడు, Zepto ను మీ ఎంపికల్లో చేర్చడానికి ఏది భిన్నంగా ఉండాలి?";
+    copy.te.welcomeLabel = "స్వాగతం";
+    copy.te.consent = "నేను పాల్గొనడానికి అంగీకరిస్తున్నాను. నా అనామక సమాధానాలను ఈ అకాడమిక్ అధ్యయనం కోసం ఉపయోగించవచ్చు.";
     copy.te.qConsiderZepto = "{method} వంటి కొనుగోలు కోసం Zepto ను ఎప్పుడు పరిగణిస్తారు?";
     copy.te.qZeptoStop = "ఈ Zepto ఆర్డర్‌లో మరో ఉపయోగకరమైన వస్తువును జోడించడానికి ఏది సహాయపడేది?";
     // Participant-facing framing: this is academic research, not a student survey.
@@ -168,7 +183,7 @@
     function textField(id, area, required) { var wrap = el("div"); var field = el(area ? "textarea" : "input", { id:id, name:id, ...(area ? {} : {type:"text"}), "aria-label": id === "contact" ? t("qContact") : titleFor(id), "autocomplete":"off" }); field.value = state.answers[id] || ""; field.addEventListener("input", function(e){ state.answers[id] = e.target.value; }); wrap.appendChild(field); if (area) { var mr = el("div", { class:"mic-row" }); var mic = el("button", { type:"button", class:"mic-btn", text:"◉ " + t("voice"), "aria-label":t("voice") }); mic.addEventListener("click", function(){ startVoice(field,mic); }); mr.appendChild(mic); wrap.appendChild(mr); } return wrap; }
     function startVoice(field, button) { var SR = window.SpeechRecognition || window.webkitSpeechRecognition; if (!SR) { button.textContent = t("voice") + " — unavailable"; return; } var rec = new SR(); rec.lang = state.lang === "hi" ? "hi-IN" : state.lang === "te" ? "te-IN" : "en-IN"; rec.interimResults = false; button.classList.add("listening"); rec.onresult = function(e){ field.value = (field.value ? field.value + " " : "") + e.results[0][0].transcript; state.answers[field.id] = field.value; }; rec.onend = function(){ button.classList.remove("listening"); button.textContent = "◉ " + t("voice"); }; rec.onerror = function(){ button.classList.remove("listening"); }; rec.start(); }
     function render() { if (state.done) return renderThankYou(); var s = steps(); if (state.index >= s.length) state.index = s.length - 1; var id = s[state.index]; var app = document.getElementById("app"); app.innerHTML = ""; document.getElementById("brand").textContent = t("brand"); document.querySelectorAll("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === state.lang ? "true" : "false"); }); document.body.className = state.lang === "en" ? "" : "lang-" + state.lang; document.getElementById("progress").style.width = Math.round((state.index / Math.max(1,s.length-1))*100) + "%";
-      if (id === "welcome") { app.appendChild(el("div", {class:"intro-mark", text:"B"})); app.appendChild(el("div", {class:"kicker", text:"1 / " + s.length})); app.appendChild(el("div", {class:"kicker", text:t("welcomeKicker")})); app.appendChild(el("h1", {text:t("welcomeTitle")})); app.appendChild(el("p", {class:"hint", text:t("welcomeBody")})); var c = el("label", {class:"consent"}); var cb = el("input", {type:"checkbox", id:"consent"}); cb.checked = state.consent; cb.addEventListener("change", function(){ state.consent = cb.checked; updateNav(); }); c.appendChild(cb); c.appendChild(el("span", {text:t("consent")})); app.appendChild(c); updateNav(); return; }
+      if (id === "welcome") { app.appendChild(el("div", {class:"intro-mark", text:"B"})); app.appendChild(el("div", {class:"kicker", text:t("welcomeLabel")})); app.appendChild(el("div", {class:"kicker", text:t("welcomeKicker")})); app.appendChild(el("h1", {text:t("welcomeTitle")})); app.appendChild(el("p", {class:"hint", text:t("welcomeBody")})); var c = el("label", {class:"consent"}); var cb = el("input", {type:"checkbox", id:"consent"}); cb.checked = state.consent; cb.addEventListener("change", function(){ state.consent = cb.checked; updateNav(); }); c.appendChild(cb); c.appendChild(el("span", {text:t("consent")})); app.appendChild(c); updateNav(); return; }
       app.appendChild(el("div", {class:"kicker", text:(state.index + 1) + " / " + s.length})); app.appendChild(el("h2", {text:titleFor(id)}));
       if (id === "ageGroup") app.appendChild(renderOptions(id, ageGroups, false));
       else if (id === "livingArrangement") app.appendChild(renderOptions(id, livingArrangements, false));

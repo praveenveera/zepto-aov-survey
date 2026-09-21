@@ -10,9 +10,9 @@ The profile questions are non-identifying and include a “Prefer not to say” 
 
 ## Section 1 — Consent
 
-**Q1. Required checkbox**
+**Before you begin — consent checkbox**
 
-I agree that my anonymous answers may be used as research evidence or anonymous quotes in this academic study. My name will not be published.
+I agree to take part. My anonymous responses may be used for this academic study. My name will not be published.
 
 ## Section 2 — Shopping context
 
