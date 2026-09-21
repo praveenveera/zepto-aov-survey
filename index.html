@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2B174F">
+  <title>Basket Stories — Grocery Research</title>
+  <meta name="description" content="Independent student research about grocery and quick-commerce shopping habits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Crimson+Pro:wght@500;600;700&family=Hind:wght@400;500;600;700&family=Noto+Sans+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #241A2D;
+      --plum: #2B174F;
+      --plum-2: #43236E;
+      --paper: #FFF8F0;
+      --surface: #FFFFFF;
+      --coral: #E4572E;
+      --coral-soft: #FFE1D7;
+      --mint: #1B998B;
+      --mint-soft: #DDF4F0;
+      --gold: #F2C14E;
+      --muted: #5E5467;
+      --line: #D8CCD9;
+      --danger: #B42318;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { background: var(--paper); color: var(--ink); font-family: 'Atkinson Hyperlegible','Hind','Noto Sans Telugu',sans-serif; font-size: 18px; line-height: 1.5; }
+    body.lang-hi { font-family: 'Hind','Atkinson Hyperlegible',sans-serif; }
+    body.lang-te { font-family: 'Noto Sans Telugu','Atkinson Hyperlegible',sans-serif; }
+    button, input, textarea { font: inherit; }
+    .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; background: var(--plum); color: white; box-shadow: 0 3px 0 rgba(36,26,45,.15); }
+    .brand { font-family: 'Crimson Pro',serif; font-size: 1.45rem; font-weight: 700; letter-spacing: .01em; }
+    .lang-toggle { display: flex; gap: 6px; }
+    .lang-toggle button { min-width: 44px; min-height: 44px; padding: 7px 10px; border: 2px solid rgba(255,255,255,.75); border-radius: 999px; background: transparent; color: white; cursor: pointer; font-weight: 700; }
+    .lang-toggle button[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .progress-track { height: 5px; background: #E8DDED; }
+    .progress-fill { height: 100%; width: 0; background: var(--coral); transition: width .25s ease-out; }
+    main { display: flex; justify-content: center; padding: 28px 16px 110px; }
+    .card { width: 100%; max-width: 520px; }
+    .kicker { color: var(--plum-2); font-size: .86rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { margin: 6px 0 12px; color: var(--plum); font-family: 'Crimson Pro',serif; font-size: 2.15rem; line-height: 1.06; }
+    h2 { margin: 0 0 10px; color: var(--plum); font-family: 'Crimson Pro',serif; font-size: 1.75rem; line-height: 1.15; }
+    .hint { margin: 0 0 22px; color: var(--muted); }
+    .intro-mark { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; margin-bottom: 14px; border-radius: 18px; background: var(--gold); color: var(--plum); font-family: 'Crimson Pro',serif; font-size: 2.1rem; font-weight: 700; box-shadow: 6px 6px 0 var(--plum); }
+    .option-list { display: flex; flex-direction: column; gap: 12px; }
+    .option { display: flex; align-items: flex-start; gap: 12px; width: 100%; min-height: 52px; padding: 15px 16px; border: 2px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); text-align: left; cursor: pointer; box-shadow: 0 3px 0 rgba(43,23,79,.08); transition: border-color .18s ease, background .18s ease, transform .18s ease, box-shadow .18s ease; }
+    .option:hover { border-color: var(--plum-2); transform: translateY(-1px); box-shadow: 0 5px 0 rgba(43,23,79,.12); }
+    .option.selected { border-color: var(--coral); background: var(--coral-soft); box-shadow: 0 3px 0 var(--coral); }
+    .option .mark { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 24px; width: 24px; height: 24px; margin-top: 1px; border: 2px solid var(--plum); border-radius: 50%; color: white; font-size: .85rem; font-weight: 700; }
+    .option.checkbox .mark { border-radius: 6px; }
+    .option.selected .mark { background: var(--coral); border-color: var(--coral); }
+    .option-copy { display: flex; flex: 1; align-items: center; justify-content: space-between; gap: 12px; }
+    .study-focus { display: inline-flex; flex: 0 0 auto; align-items: center; padding: 4px 9px; border: 1px solid var(--plum-2); border-radius: 999px; background: var(--mint-soft); color: #126C63; font-size: .78rem; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+    textarea, input[type="text"] { width: 100%; border: 2px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); padding: 14px 15px; font-size: 1.05rem; }
+    textarea { min-height: 150px; resize: vertical; }
+    textarea:focus, input:focus, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+    .field-note { margin-top: 7px; color: var(--muted); font-size: .9rem; }
+    .error { margin-top: 12px; padding: 10px 12px; border-left: 4px solid var(--danger); background: #FDE8E7; color: var(--danger); }
+    .bottom { position: fixed; right: 0; bottom: 0; left: 0; z-index: 9; display: flex; justify-content: center; padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: rgba(255,248,240,.95); border-top: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .bottom-inner { display: flex; justify-content: space-between; gap: 12px; width: 100%; max-width: 520px; }
+    .nav-btn { min-width: 120px; min-height: 48px; padding: 12px 20px; border: 2px solid var(--plum); border-radius: 999px; background: var(--plum); color: white; cursor: pointer; font-weight: 700; box-shadow: 0 3px 0 #160B2A; }
+    .nav-btn.secondary { background: var(--surface); color: var(--plum); box-shadow: none; }
+    .nav-btn:disabled { cursor: wait; opacity: .6; }
+    .success { padding: 26px; border: 2px solid var(--mint); border-radius: 18px; background: var(--mint-soft); }
+    .success h1 { color: #126C63; }
+    .consent { display: flex; align-items: flex-start; gap: 12px; margin-top: 22px; padding: 14px; border: 2px solid var(--line); border-radius: 14px; background: var(--surface); }
+    .consent input { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--coral); }
+    .hidden { display: none !important; }
+    .mic-row { display: flex; justify-content: flex-end; margin-top: 8px; }
+    .mic-btn { min-height: 44px; padding: 8px 12px; border: 2px solid var(--plum); border-radius: 999px; background: var(--surface); color: var(--plum); cursor: pointer; font-weight: 700; }
+    .mic-btn.listening { background: var(--coral-soft); border-color: var(--coral); color: var(--coral); }
+    @media (min-width: 700px) { main { padding-top: 48px; } .card { max-width: 600px; } h1 { font-size: 2.5rem; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" id="brand">Basket Stories</div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="hi" aria-pressed="false">हिं</button>
+      <button type="button" data-lang="te" aria-pressed="false">తె</button>
+    </div>
+  </header>
+  <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress"></div></div>
+  <main><section class="card" id="app" aria-live="polite"></section></main>
+  <div class="bottom"><div class="bottom-inner"><button id="backBtn" class="nav-btn secondary" type="button">Back</button><button id="nextBtn" class="nav-btn" type="button">Start</button></div></div>
+  <script>
+    // Add the deployed Zepto Apps Script web-app URL before distribution.
+    var APPS_SCRIPT_URL = "PASTE_ZEPTO_APPS_SCRIPT_URL_HERE";
+    var state = { lang: "en", index: 0, answers: {}, consent: false, submitting: false, done: false };
+
+    var copy = {
+      en: {
+        brand: "Basket Stories", studyFocus: "Study focus", start: "Start", next: "Next", back: "Back", submit: "Submit", sending: "Sending…", required: "Please answer this question before continuing.",
+        welcomeKicker: "Independent student research", welcomeTitle: "How do you decide where to buy groceries?", welcomeBody: "We are studying quick-commerce, supermarkets, local stores, bulk buying, and subscriptions. This survey takes about 5–7 minutes. It is not affiliated with Zepto or any other retailer.", consent: "I agree that my anonymous answers may be used as research evidence or anonymous quotes in this student project.",
+        qMethods: "Which of these have you used in the last 90 days?", qPrimary: "Which method do you use most often for groceries and household items?", qDrivers: "What usually determines which method you choose? (Choose up to three)", qRecentMethod: "Think about your most recent grocery or household purchase. Which method did you use?", qTrigger: "What triggered that purchase?", qNeed: "What was the first item or need that started the purchase?", qItems: "Approximately how many items did you buy?", qSpend: "Approximately how much did you spend?", qCategories: "Which categories did you buy?", qExpansion: "After adding the first item or need, what did you do next?", qConsidered: "Did you consider adding anything else but decide not to?", qStop: "What was the main reason you did not add it?", qThreshold: "Did any delivery fee, free-delivery threshold, coupon, or offer affect your basket decision?", qZeptoWhy: "Why did you choose Zepto for that order instead of another option?", qZeptoStop: "What most influenced the point where you stopped adding items?", qUsedBefore: "Have you used Zepto before?", qNotZepto: "What is the main reason you do not use Zepto more often?", qStory: "Describe the last time you decided where to buy groceries or household items. What were you trying to accomplish, and how did you decide?", qPrevent: "What usually prevents you from adding more items to the same order or basket?", qImprove: "What would make you consider buying more items through your preferred method?", qFollow: "Would you be open to a short follow-up conversation about this purchase?", qContact: "Phone or email (optional)", yes: "Yes", no: "No", unsure: "Not sure", other: "Other", thankTitle: "Thank you for sharing your basket story", thankBody: "Your response has been recorded. Your answers will be reviewed only in aggregate or anonymously.", openHint: "Please describe a real recent purchase. Do not include passwords or sensitive personal information.", voice: "Voice input", selectUpTo: "Select up to three", noZepto: "I have not used Zepto recently", notRemember: "I do not remember", preferNot: "Prefer not to say", noEffect: "No effect", doNotKnow: "I did not notice any threshold or offer"
+      },
+      hi: {
+        brand: "Basket Stories", studyFocus: "अध्ययन का फोकस", start: "शुरू करें", next: "आगे", back: "पीछे", submit: "जमा करें", sending: "भेजा जा रहा है…", required: "आगे बढ़ने से पहले इस सवाल का जवाब दें।", welcomeKicker: "स्वतंत्र छात्र शोध", welcomeTitle: "आप किराने का सामान कहां से खरीदना तय करते हैं?", welcomeBody: "हम क्विक-कॉमर्स, सुपरमार्केट, स्थानीय दुकानों, थोक खरीद और सब्सक्रिप्शन का अध्ययन कर रहे हैं। इसमें 5–7 मिनट लगेंगे। यह Zepto या किसी अन्य रिटेलर से संबद्ध नहीं है।", consent: "मैं सहमत हूं कि इस छात्र प्रोजेक्ट में मेरे गुमनाम जवाबों का उपयोग शोध प्रमाण या गुमनाम उद्धरण के रूप में किया जा सकता है।", qMethods: "पिछले 90 दिनों में आपने इनमें से किसका उपयोग किया है?", qPrimary: "किराने और घरेलू सामान के लिए आप किस तरीके का सबसे अधिक उपयोग करते हैं?", qDrivers: "आप तरीका चुनते समय किन बातों को देखते हैं? (अधिकतम तीन चुनें)", qRecentMethod: "अपनी सबसे हाल की किराने की खरीदारी के बारे में सोचें। आपने कौन सा तरीका इस्तेमाल किया?", qTrigger: "उस खरीदारी की वजह क्या थी?", qNeed: "कौन सी पहली वस्तु या जरूरत से खरीदारी शुरू हुई?", qItems: "लगभग कितनी वस्तुएं खरीदीं?", qSpend: "लगभग कितना खर्च हुआ?", qCategories: "आपने कौन सी श्रेणियां खरीदीं?", qExpansion: "पहली वस्तु या जरूरत जोड़ने के बाद आपने क्या किया?", qConsidered: "क्या आपने कुछ और जोड़ने के बारे में सोचा लेकिन नहीं जोड़ा?", qStop: "आपने उसे क्यों नहीं जोड़ा?", qThreshold: "क्या डिलीवरी फीस, फ्री-डिलीवरी सीमा, कूपन या ऑफर का असर पड़ा?", qZeptoWhy: "आपने उस ऑर्डर के लिए दूसरे विकल्प के बजाय Zepto क्यों चुना?", qZeptoStop: "आपने सामान जोड़ना किस वजह से रोका?", qUsedBefore: "क्या आपने पहले Zepto इस्तेमाल किया है?", qNotZepto: "आप Zepto का अधिक उपयोग क्यों नहीं करते?", qStory: "पिछली बार आपने किराने का सामान कहां से खरीदना तय किया, उसका वर्णन करें। आपका उद्देश्य क्या था और आपने कैसे तय किया?", qPrevent: "आपको उसी ऑर्डर या बास्केट में और सामान जोड़ने से क्या रोकता है?", qImprove: "आपके पसंदीदा तरीके से और सामान खरीदने के लिए क्या मददगार होगा?", qFollow: "क्या आप इस खरीदारी पर छोटी फॉलो-अप बातचीत के लिए तैयार होंगे?", qContact: "फोन या ईमेल (वैकल्पिक)", yes: "हां", no: "नहीं", unsure: "पक्का नहीं", other: "अन्य", thankTitle: "अपनी बास्केट कहानी साझा करने के लिए धन्यवाद", thankBody: "आपका जवाब दर्ज हो गया है। जवाबों की समीक्षा केवल समूह रूप में या गुमनाम तरीके से की जाएगी।", openHint: "हाल की वास्तविक खरीदारी बताएं। पासवर्ड या संवेदनशील निजी जानकारी न लिखें।", voice: "आवाज़ से लिखें", selectUpTo: "अधिकतम तीन चुनें", noZepto: "मैंने हाल में Zepto इस्तेमाल नहीं किया", notRemember: "याद नहीं", preferNot: "बताना नहीं चाहते", noEffect: "कोई असर नहीं", doNotKnow: "कोई सीमा या ऑफर नहीं देखा"
+      },
+      te: {
+        brand: "Basket Stories", studyFocus: "పరిశోధన దృష్టి", start: "ప్రారంభించండి", next: "తదుపరి", back: "వెనుకకు", submit: "సమర్పించండి", sending: "పంపుతోంది…", required: "కొనసాగించే ముందు ఈ ప్రశ్నకు సమాధానం ఇవ్వండి.", welcomeKicker: "స్వతంత్ర విద్యార్థి పరిశోధన", welcomeTitle: "కిరాణా సామాను ఎక్కడ కొనాలో ఎలా నిర్ణయిస్తారు?", welcomeBody: "క్విక్-కామర్స్, సూపర్‌మార్కెట్లు, స్థానిక దుకాణాలు, బల్క్ కొనుగోలు మరియు సబ్‌స్క్రిప్షన్‌లను మేము అధ్యయనం చేస్తున్నాం. దీనికి 5–7 నిమిషాలు పడుతుంది. ఇది Zepto లేదా మరే ఇతర రిటైలర్‌కు సంబంధించినది కాదు.", consent: "ఈ విద్యార్థి ప్రాజెక్ట్‌లో నా అనామక సమాధానాలను పరిశోధన ఆధారంగా లేదా అనామక కోట్‌లుగా ఉపయోగించవచ్చని నేను అంగీకరిస్తున్నాను.", qMethods: "గత 90 రోజుల్లో వీటిలో దేనిని ఉపయోగించారు?", qPrimary: "కిరాణా మరియు ఇంటి వస్తువుల కోసం మీరు ఎక్కువగా ఏ పద్ధతిని ఉపయోగిస్తారు?", qDrivers: "పద్ధతిని ఎంచుకునేటప్పుడు సాధారణంగా ఏ విషయాలు ప్రభావితం చేస్తాయి? (మూడు వరకు ఎంచుకోండి)", qRecentMethod: "మీ ఇటీవలి కిరాణా లేదా ఇంటి వస్తువుల కొనుగోలు గురించి ఆలోచించండి. ఏ పద్ధతిని ఉపయోగించారు?", qTrigger: "ఆ కొనుగోలుకు కారణం ఏమిటి?", qNeed: "మొదట ఏ వస్తువు లేదా అవసరం కొనుగోలును ప్రారంభించింది?", qItems: "సుమారుగా ఎన్ని వస్తువులు కొన్నారు?", qSpend: "సుమారుగా ఎంత ఖర్చు చేశారు?", qCategories: "ఏ కేటగిరీలను కొన్నారు?", qExpansion: "మొదటి వస్తువు లేదా అవసరాన్ని జోడించిన తర్వాత ఏమి చేశారు?", qConsidered: "ఇంకేదైనా జోడించాలని అనుకుని, జోడించకుండా వదిలేశారా?", qStop: "దాన్ని ఎందుకు జోడించలేదు?", qThreshold: "డెలివరీ ఫీజు, ఉచిత డెలివరీ పరిమితి, కూపన్ లేదా ఆఫర్ ప్రభావం చూపిందా?", qZeptoWhy: "ఆ ఆర్డర్ కోసం మరో ఎంపికకు బదులుగా Zepto ఎందుకు ఎంచుకున్నారు?", qZeptoStop: "వస్తువులు జోడించడం ఎక్కడ ఆపడానికి ప్రధాన కారణం ఏమిటి?", qUsedBefore: "మీరు ఇంతకు ముందు Zepto ఉపయోగించారా?", qNotZepto: "మీరు Zepto ను ఎక్కువగా ఎందుకు ఉపయోగించరు?", qStory: "చివరిసారి కిరాణా సామాను ఎక్కడ కొనాలో ఎలా నిర్ణయించారో వివరించండి. మీ లక్ష్యం ఏమిటి, ఎలా నిర్ణయించారు?", qPrevent: "అదే ఆర్డర్ లేదా బాస్కెట్‌లో మరిన్ని వస్తువులు జోడించకుండా మిమ్మల్ని ఏది ఆపుతుంది?", qImprove: "మీకు ఇష్టమైన పద్ధతిలో మరిన్ని వస్తువులు కొనడానికి ఏది సహాయపడుతుంది?", qFollow: "ఈ కొనుగోలు గురించి చిన్న ఫాలో-అప్ సంభాషణకు సిద్ధంగా ఉన్నారా?", qContact: "ఫోన్ లేదా ఇమెయిల్ (ఐచ్ఛికం)", yes: "అవును", no: "కాదు", unsure: "ఖచ్చితంగా తెలియదు", other: "ఇతర", thankTitle: "మీ బాస్కెట్ కథను పంచుకున్నందుకు ధన్యవాదాలు", thankBody: "మీ సమాధానం నమోదు చేయబడింది. సమాధానాలను సమూహంగా లేదా అనామకంగా మాత్రమే సమీక్షిస్తాము.", openHint: "ఇటీవలి నిజమైన కొనుగోలును వివరించండి. పాస్‌వర్డ్‌లు లేదా సున్నితమైన వ్యక్తిగత సమాచారాన్ని చేర్చవద్దు.", voice: "వాయిస్ ఇన్‌పుట్", selectUpTo: "మూడు వరకు ఎంచుకోండి", noZepto: "నేను ఇటీవల Zepto ఉపయోగించలేదు", notRemember: "గుర్తు లేదు", preferNot: "చెప్పడం ఇష్టం లేదు", noEffect: "ప్రభావం లేదు", doNotKnow: "పరిమితి లేదా ఆఫర్ గమనించలేదు"
+      }
+    };
+    copy.en.qAltWhy = "Why did you choose {method} for this purchase?";
+    copy.en.qConsiderZepto = "For a similar {method} purchase, what would make you consider Zepto?";
+    copy.en.qZeptoStop = "In this Zepto order, what influenced where you stopped adding items?";
+    copy.hi.qAltWhy = "इस खरीदारी के लिए आपने {method} क्यों चुना?";
+    copy.hi.qConsiderZepto = "{method} जैसी खरीदारी के लिए आप Zepto पर कब विचार करेंगे?";
+    copy.hi.qZeptoStop = "इस Zepto ऑर्डर में सामान जोड़ना रोकने का कारण क्या था?";
+    copy.te.qAltWhy = "ఈ కొనుగోలు కోసం {method} ను ఎందుకు ఎంచుకున్నారు?";
+    copy.te.qConsiderZepto = "{method} వంటి కొనుగోలు కోసం Zepto ను ఎప్పుడు పరిగణిస్తారు?";
+    copy.te.qZeptoStop = "ఈ Zepto ఆర్డర్‌లో వస్తువులు జోడించడం ఎక్కడ ఆపారు, ఎందుకు?";
+    var methods = ["zepto","blinkit","instamart","bigbasket","amazonFresh","localStore","dmart","bulk","subscription","market","otherMethod"];
+    var methodLabels = { zepto:"Zepto", blinkit:"Blinkit", instamart:"Swiggy Instamart", bigbasket:"BigBasket / BB Now", amazonFresh:"Amazon Fresh", localStore:"Local grocery or kirana store", dmart:"Dmart or another supermarket", bulk:"Weekly or monthly bulk purchase", subscription:"Milk or grocery subscription", market:"Local market", otherMethod:"Other" };
+    var drivers = ["Urgency","Lower price","Bulk value or larger pack sizes","Convenience","Availability","Freshness or quality","Familiarity or habit","Discounts and offers","Plan the whole household purchase","Delivery speed","Subscription convenience","Other"];
+    var triggers = ["Urgent need","Planned top-up","Weekly or monthly stock-up","Meal or snack","Event or guests","Recurring subscription","Offer or discount","Other"];
+    var categories = ["Fresh produce","Dairy, bread, or eggs","Staples or packaged groceries","Snacks or beverages","Personal care","Household cleaning","Baby or pet products","Ready-to-eat or meal items","Other"];
+    var expansion = ["Added already-planned items","Browsed and added extra items","Searched for related items","Added items to reach an offer or threshold","Checked out immediately","Removed items before checkout","I do not remember"];
+    var stopReasons = ["The urgent need was complete","I prefer buying larger quantities elsewhere","It felt too expensive","I was trying to control spending","I had no time to browse","I could not find the right item","Suggestions were not relevant","I did not trust the quality or pack size","I had reached a useful threshold or offer","I planned to buy it elsewhere","Other"];
+    var optionSets = { methods: methods, drivers: drivers, triggers: triggers, categories: categories, expansion: expansion, stopReasons: stopReasons };
+
+    function t(k) { return (copy[state.lang] && copy[state.lang][k]) || copy.en[k] || k; }
+    function label(v) { return methodLabels[v] || v; }
+    function el(tag, attrs, children) { var n = document.createElement(tag); attrs = attrs || {}; Object.keys(attrs).forEach(function(k){ if (k === "text") n.textContent = attrs[k]; else if (k === "html") n.innerHTML = attrs[k]; else n.setAttribute(k, attrs[k]); }); (children || []).forEach(function(c){ n.appendChild(c); }); return n; }
+    function hasZepto() { return (state.answers.methods || []).indexOf("zepto") !== -1; }
+    function currentRecentIsZepto() { return state.answers.recentMethod === "zepto"; }
+    function recentMethodLabel() { return label(state.answers.recentMethod || ""); }
+    function steps() { var s = ["welcome","methods","primary","drivers","recentMethod","trigger","story","need","items","spend","categories","expansion","considered","stop","threshold"]; if (currentRecentIsZepto()) s.push("zeptoWhy","zeptoStop"); else s.push("altWhy","usedBefore","considerZepto"); s.push("prevent","follow"); return s; }
+    function titleFor(id) { var map = { methods:"qMethods", primary:"qPrimary", drivers:"qDrivers", recentMethod:"qRecentMethod", trigger:"qTrigger", need:"qNeed", items:"qItems", spend:"qSpend", categories:"qCategories", expansion:"qExpansion", considered:"qConsidered", stop:"qStop", threshold:"qThreshold", zeptoWhy:"qZeptoWhy", zeptoStop:"qZeptoStop", usedBefore:"qUsedBefore", story:"qStory", prevent:"qPrevent", improve:"qImprove", follow:"qFollow" }; if (id === "altWhy") return t("qAltWhy").replace("{method}", recentMethodLabel()); if (id === "considerZepto") return t("qConsiderZepto").replace("{method}", recentMethodLabel()); return map[id] ? t(map[id]) : ""; }
+    function isMulti(id) { return ["methods","drivers","categories"].indexOf(id) !== -1; }
+    function optionValues(id) { if (id === "methods") return methods; if (id === "drivers") return drivers; if (id === "categories") return categories; if (id === "triggers") return triggers; if (id === "expansion") return expansion; if (id === "stopReasons") return stopReasons; return []; }
+    function displayValue(id, v) { if (["methods","primary","recentMethod"].indexOf(id) !== -1) return label(v); return v; }
+    function renderOptions(id, values, multi) { var list = el("div", { class: "option-list" }); var current = state.answers[id] || (multi ? [] : ""); values.forEach(function(v){ var selected = multi ? current.indexOf(v) !== -1 : current === v; var btn = el("button", { type:"button", class:"option" + (multi ? " checkbox" : "") + (selected ? " selected" : ""), "aria-pressed": selected ? "true" : "false" }); btn.appendChild(el("span", { class:"mark", text:selected ? "✓" : "" })); var copyWrap = el("span", { class:"option-copy" }); copyWrap.appendChild(el("span", { text:displayValue(id,v) })); if (["methods","primary","recentMethod"].indexOf(id) !== -1 && v === "zepto") copyWrap.appendChild(el("span", { class:"study-focus", text:t("studyFocus") })); btn.appendChild(copyWrap); btn.addEventListener("click", function(){ if (multi) { if (!Array.isArray(state.answers[id])) state.answers[id] = []; var i = state.answers[id].indexOf(v); if (i === -1) { if (id === "drivers" && state.answers[id].length >= 3) return; state.answers[id].push(v); } else state.answers[id].splice(i,1); } else state.answers[id] = v; render(); }); list.appendChild(btn); }); return list; }
+    function textField(id, area, required) { var wrap = el("div"); var field = el(area ? "textarea" : "input", { id:id, name:id, ...(area ? {} : {type:"text"}), "aria-label": id === "contact" ? t("qContact") : titleFor(id), "autocomplete":"off" }); field.value = state.answers[id] || ""; field.addEventListener("input", function(e){ state.answers[id] = e.target.value; }); wrap.appendChild(field); if (area) { var mr = el("div", { class:"mic-row" }); var mic = el("button", { type:"button", class:"mic-btn", text:"◉ " + t("voice"), "aria-label":t("voice") }); mic.addEventListener("click", function(){ startVoice(field,mic); }); mr.appendChild(mic); wrap.appendChild(mr); } return wrap; }
+    function startVoice(field, button) { var SR = window.SpeechRecognition || window.webkitSpeechRecognition; if (!SR) { button.textContent = t("voice") + " — unavailable"; return; } var rec = new SR(); rec.lang = state.lang === "hi" ? "hi-IN" : state.lang === "te" ? "te-IN" : "en-IN"; rec.interimResults = false; button.classList.add("listening"); rec.onresult = function(e){ field.value = (field.value ? field.value + " " : "") + e.results[0][0].transcript; state.answers[field.id] = field.value; }; rec.onend = function(){ button.classList.remove("listening"); button.textContent = "◉ " + t("voice"); }; rec.onerror = function(){ button.classList.remove("listening"); }; rec.start(); }
+    function render() { if (state.done) return renderThankYou(); var s = steps(); if (state.index >= s.length) state.index = s.length - 1; var id = s[state.index]; var app = document.getElementById("app"); app.innerHTML = ""; document.getElementById("brand").textContent = t("brand"); document.querySelectorAll("[data-lang]").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.lang === state.lang ? "true" : "false"); }); document.body.className = state.lang === "en" ? "" : "lang-" + state.lang; document.getElementById("progress").style.width = Math.round((state.index / Math.max(1,s.length-1))*100) + "%";
+      if (id === "welcome") { app.appendChild(el("div", {class:"intro-mark", text:"B"})); app.appendChild(el("div", {class:"kicker", text:"1 / " + s.length})); app.appendChild(el("div", {class:"kicker", text:t("welcomeKicker")})); app.appendChild(el("h1", {text:t("welcomeTitle")})); app.appendChild(el("p", {class:"hint", text:t("welcomeBody")})); var c = el("label", {class:"consent"}); var cb = el("input", {type:"checkbox", id:"consent"}); cb.checked = state.consent; cb.addEventListener("change", function(){ state.consent = cb.checked; updateNav(); }); c.appendChild(cb); c.appendChild(el("span", {text:t("consent")})); app.appendChild(c); updateNav(); return; }
+      app.appendChild(el("div", {class:"kicker", text:(state.index + 1) + " / " + s.length})); app.appendChild(el("h2", {text:titleFor(id)}));
+      if (["methods","drivers","categories"].indexOf(id) !== -1) app.appendChild(renderOptions(id, optionValues(id), true));
+      else if (id === "primary" || id === "recentMethod") app.appendChild(renderOptions(id, methods, false));
+      else if (id === "trigger") app.appendChild(renderOptions(id, triggers, false));
+      else if (id === "expansion") app.appendChild(renderOptions(id, expansion, false));
+      else if (id === "stop" || id === "zeptoStop") app.appendChild(renderOptions(id, stopReasons, false));
+      else if (id === "altWhy") app.appendChild(renderOptions(id, alternativeReasons(state.answers.recentMethod), false));
+      else if (id === "considerZepto") app.appendChild(renderOptions(id, ["Better price or value","Larger packs or better assortment","Faster or more reliable delivery","More relevant suggestions","More confidence in quality or freshness","I would not consider Zepto","Other"], false));
+      else if (id === "considered" || id === "follow" || id === "usedBefore") app.appendChild(renderOptions(id, [t("yes"),t("no"),t("unsure")], false));
+      else if (id === "items") app.appendChild(renderOptions(id, ["1","2–3","4–6","7–10","More than 10",t("notRemember")], false));
+      else if (id === "spend") app.appendChild(renderOptions(id, ["Below ₹200","₹200–₹399","₹400–₹699","₹700–₹999","₹1,000 or more",t("preferNot")], false));
+      else if (id === "threshold") app.appendChild(renderOptions(id, ["Added items to qualify for an offer or threshold","Stopped after reaching a threshold","Paid the fee and checked out","Removed items because final price was too high",t("noEffect"),t("doNotKnow")], false));
+      else if (id === "story" || id === "prevent" || id === "improve") { app.appendChild(el("p", {class:"hint", text:t("openHint")})); app.appendChild(textField(id,true,true)); }
+      else if (id === "need") app.appendChild(textField(id,false,false));
+      if (id === "follow" && state.answers.follow === t("yes")) { var contactLabel = el("label", {for:"contact", class:"field-note", text:t("qContact")}); app.appendChild(contactLabel); app.appendChild(textField("contact",false,false)); }
+      updateNav(); }
+    function alternativeReasons(method) { if (["bulk","dmart","market","localStore","subscription"].indexOf(method) !== -1) return ["Better value for larger quantities","I already planned to shop there","Closer or more convenient","I trust the quality or freshness","Better product availability","Habit or family preference","I did not need fast delivery","Other"]; if (["blinkit","instamart","bigbasket","amazonFresh"].indexOf(method) !== -1) return ["Faster or more reliable delivery","Better price or offer","Better product availability","More familiar app or habit","Better quality or pack sizes","More convenient for this need","I did not consider Zepto","Other"]; return ["Better value","Convenience","Availability","Quality or freshness","Habit or familiarity","Speed","Other"]; }
+    function valueFor(id) { return state.answers[id]; }
+    function valid() { var id = steps()[state.index]; if (id === "welcome") return state.consent; if (["methods","drivers","categories"].indexOf(id) !== -1) return Array.isArray(valueFor(id)) && valueFor(id).length > 0; if (["story","prevent"].indexOf(id) !== -1) return String(valueFor(id)||"").trim().length >= 8; if (["need"].indexOf(id) !== -1) return String(valueFor(id)||"").trim().length > 0; return valueFor(id) !== undefined && valueFor(id) !== ""; }
+    function updateNav() { var s=steps(), id=s[state.index], last=state.index===s.length-1; document.getElementById("backBtn").classList.toggle("hidden", state.index===0 || state.done); document.getElementById("nextBtn").textContent = state.submitting ? t("sending") : (last ? t("submit") : (state.index===0 ? t("start") : t("next"))); document.getElementById("nextBtn").disabled = state.submitting; }
+    function renderThankYou() { document.getElementById("app").innerHTML=""; var box=el("div",{class:"success"}); box.appendChild(el("h1",{text:t("thankTitle")})); box.appendChild(el("p",{text:t("thankBody")})); document.getElementById("nextBtn").classList.add("hidden"); document.getElementById("backBtn").classList.add("hidden"); document.getElementById("progress").style.width="100%"; }
+    function submit() { state.submitting=true; updateNav(); var payload=Object.assign({},state.answers,{language:state.lang,consent:true,timestamp:new Date().toISOString(),followupOk:state.answers.follow===t("yes"),contact:state.answers.contact||"",rawJson:""}); payload.rawJson=JSON.stringify(payload); if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.indexOf("PASTE_")===0) { localStorage.setItem("zeptoAovLastResponse",JSON.stringify(payload)); state.submitting=false; state.done=true; renderThankYou(); return; } fetch(APPS_SCRIPT_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)}).then(function(){state.submitting=false;state.done=true;renderThankYou();}).catch(function(){state.submitting=false;updateNav(); alert("We could not send the response. Please check your connection and try again.");}); }
+    document.getElementById("nextBtn").addEventListener("click",function(){ if(!valid()){ var old=document.querySelector(".error"); if(old) old.remove(); document.getElementById("app").appendChild(el("div",{class:"error",role:"alert",text:t("required")})); return; } if(state.index===steps().length-1){submit();return;} state.index++; render(); });
+    document.getElementById("backBtn").addEventListener("click",function(){ if(state.index>0){state.index--;render();} });
+    document.querySelectorAll("[data-lang]").forEach(function(b){ b.addEventListener("click",function(){ state.lang=b.dataset.lang; render(); }); });
+    render();
+  </script>
+</body>
+</html>
